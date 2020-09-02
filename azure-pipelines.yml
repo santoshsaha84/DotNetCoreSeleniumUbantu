@@ -1,8 +1,5 @@
 
-resources:
-  containers:
-  - container: 'Ubuntu'
-    image: ubuntu:20.04
+
 
 trigger:
 - master
@@ -60,9 +57,7 @@ stages:
         
         - task: DownloadBuildArtifacts@0
           displayName: 'Download Artifcats'
-          inputs:
-           project: 'SeleniumDotNetCoreDemoYAML'
-           pipeline: 'SeleniumDotNetCoreDemoYAML-ASP.NET Core-CI'
+          inputs:          
            artifactName: 'drop'
            downloadPath: '$(System.DefaultWorkingDirectory)'
            
