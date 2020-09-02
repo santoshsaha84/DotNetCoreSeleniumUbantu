@@ -5,7 +5,7 @@ trigger:
 - master
 
 pool:
- vmImage: 'ubuntu-20.04'
+ vmImage: 'ubuntu-16.04'
 
 variables:
  BuildConfiguration: 'Release'
@@ -55,6 +55,9 @@ stages:
   - job: 
     steps:
         
+        
+        
+
         - task: DownloadBuildArtifacts@0
           displayName: 'Download Artifcats'
           inputs:          
