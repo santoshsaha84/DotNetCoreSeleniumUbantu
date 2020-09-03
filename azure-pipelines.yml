@@ -70,7 +70,7 @@ stages:
           inputs:
            command: custom           
            projects: '**/DotNetCoreSeleniumLinux.dll'      
-           custom: vstest    
+           custom: sudo vstest    
            arguments: '--logger:trx;logfilename=TEST.xml'
            feedsToUse: select
 
