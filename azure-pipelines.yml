@@ -63,13 +63,21 @@ stages:
           inputs:          
            artifactName: 'drop'
            downloadPath: '$(System.DefaultWorkingDirectory)'
+       
+        - task: CmdLine@2
+          inputs:
+            script: |
+              cd $(System.DefaultWorkingDirectory)
+              wget https://chromedriver.storage.googleapis.com/2.40/chromedriver_linux64.zip
+              unzip chromedriver_linux64.zip # sudo apt install unzip
+              chmod 774 chromedriver
            
         - task: DotNetCoreCLI@2
           displayName: 'Selenium run'
           inputs:
            command: custom           
-           projects: '**/SeleniumDemoYAML.dll'
-           custom: vstest
+           projects: '**/DotNetCoreSeleniumLinux.dll'      
+           custom: vstest    
            arguments: '--logger:trx;logfilename=TEST.xml'
            feedsToUse: select
 
