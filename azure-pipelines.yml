@@ -68,9 +68,8 @@ stages:
         - task: DotNetCoreCLI@2
           displayName: 'Selenium run'
           inputs:
-           command: custom           
-           projects: '**/DotNetCoreSeleniumLinux.dll'
-           custom: vstest
+           command: test           
+           projects: '**/DotNetCoreSeleniumLinux.dll'           
            arguments: '--logger:trx;logfilename=TEST.xml'
            feedsToUse: select
 
