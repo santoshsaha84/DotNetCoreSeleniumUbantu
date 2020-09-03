@@ -207,3 +207,4 @@ $RECYCLE.BIN/
 /.vs/SeleniumDemoYAML/DesignTimeBuild
 /.vs/DotNetCoreSeleniumLinux/v16/TestStore/0/000.testlog
 /.vs/DotNetCoreSeleniumLinux/v16/TestStore/0/testlog.manifest
+/.vs/DotNetCoreSeleniumLinux/DesignTimeBuild/*.v2
