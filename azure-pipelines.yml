@@ -70,7 +70,7 @@ stages:
             targetType: 'inline'
             script: |
               cd $(System.DefaultWorkingDirectory)/drop
-              wget https://chromedriver.storage.googleapis.com/85.0.4183.8700/chromedriver_linux64.zip
+              wget https://chromedriver.storage.googleapis.com/85.0.4183.87/chromedriver_linux64.zip
               unzip chromedriver_linux64.zip # sudo apt install unzip
               chmod 774 chromedriver
         - task: CmdLine@2
