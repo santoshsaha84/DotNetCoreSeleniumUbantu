@@ -68,7 +68,7 @@ stages:
           inputs:
             script: |
               echo $(System.DefaultWorkingDirectory)
-              cd /home/vsts/work/1/s/drop
+              cd $(System.DefaultWorkingDirectory)/drop
               chmod a+x chromedriver
            
         - task: DotNetCoreCLI@2
