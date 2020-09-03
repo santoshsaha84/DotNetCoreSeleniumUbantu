@@ -2,8 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <IsPackable>false</IsPackable>	
-    <publishChromeDriver>true</publishChromeDriver>
+    <IsPackable>false</IsPackable>	    
   </PropertyGroup>
 
   <ItemGroup>
