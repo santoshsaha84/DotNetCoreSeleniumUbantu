@@ -64,6 +64,14 @@ stages:
            artifactName: 'drop'
            downloadPath: '$(System.DefaultWorkingDirectory)'
        
+        - task: PowerShell@2
+          inputs:
+            targetType: 'inline'
+            script: |
+              cd $(System.DefaultWorkingDirectory)/drop
+              wget https://chromedriver.storage.googleapis.com/2.40/chromedriver_linux64.zip
+              unzip chromedriver_linux64.zip # sudo apt install unzip
+              chmod 774 chromedriver
         - task: CmdLine@2
           inputs:
             script: |
