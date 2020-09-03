@@ -67,6 +67,7 @@ stages:
         - task: CmdLine@2
           inputs:
             script: |
+              echo $(System.DefaultWorkingDirectory)
               cd /home/vsts/work/1/s/drop
               chmod a+x chromedriver
            
