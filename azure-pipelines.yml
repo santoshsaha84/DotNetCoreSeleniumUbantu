@@ -67,7 +67,8 @@ stages:
         - task: CmdLine@2
           inputs:
             script: |
-              cd $(System.DefaultWorkingDirectory)
+              echo $(System.DefaultWorkingDirectory)
+              cd $(System.DefaultWorkingDirectory)/drop
               chmod a+x chromedriver
            
         - task: DotNetCoreCLI@2
